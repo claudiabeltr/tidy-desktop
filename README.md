@@ -7,7 +7,7 @@ A lightweight desktop widget that lets you scatter customizable sticky notes acr
 ### Phase 0:
 - [x] Initial post-it design
 - [x] Github repository created
-- [ ] Base Electron project structure
+- [x] Base Electron project structure
 
 ### Phase 1: Functional post-it
 - [ ] Borderless, transparent post-it window
