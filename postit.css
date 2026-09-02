@@ -54,6 +54,19 @@ html, body {
     transform: scale(1.15);
 }
 
+.postit-text {
+    flex: 1;
+    border: none;
+    background: transparent;
+    resize: none;
+    outline: none;
+    padding: 85px 30px;
+    font-size: 14px;
+    color: #3a3a3a;
+    font-family: inherit;
+    -webkit-app-region: no-drag;
+}
+
 .close-btn {
     -webkit-app-region: no-drag;
     border: none;
