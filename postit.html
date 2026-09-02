@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tidy-Desktop</title>
+    <link rel="stylesheet" href="postit.css">
+</head>
+<body>
+    <div class="postit" id="postit">
+        <div class="postit-header" id="drag-handle">
+            <div class="color-dots">
+                <span class="dot" data-col="0" data-row="0"></span>
+                <span class="dot" data-col="1" data-row="0"></span>
+                <span class="dot" data-col="2" data-row="0"></span>
+                <span class="dot" data-col="3" data-row="0"></span>
+                <span class="dot" data-col="4" data-row="0"></span>
+            </div>
+            <button class="close-btn" id="close-btn">✕</button>
+        </div>
+        <textarea class="postit-text" id="postit-text" placeholder="Write here..."></textarea>
+    </div>
+    <script src="postit.js"></script>
+</body>
+</html>
