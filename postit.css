@@ -58,6 +58,16 @@ html, body {
     pointer-events: auto;
 }
 
+/* invisible bridge FIX hover*/
+.postit::before {
+    content: "";
+    position: absolute;
+    left: -26px;
+    top: 0;
+    width: 26px;
+    height: 100%;
+}
+
 .dot {
     width: 16px;
     height: 16px;
