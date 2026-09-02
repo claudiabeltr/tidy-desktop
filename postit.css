@@ -20,8 +20,10 @@ html, body {
 }
 
 .postit {
-    width: 100%;
+    position: relative;
+    width: calc(100% - 26 px);
     height: 100%;
+    margin-left: 26px;
     box-shadow: 0, 4px, 10px rgba(0, 0, 0, 0.25);
     display: flex;
     flex-direction: column;
@@ -31,21 +33,34 @@ html, body {
     height: 28px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
     padding: 0 6px;
     -webkit-app-region: drag;
     cursor: grab;
 }
 
 .color-dots {
+    position: absolute;
+    left: -26px;
+    top: 50%;
+    transform: translateY(-50%);
     display: flex;
-    gap: 5px;
+    flex-direction: column;
+    gap: 8px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.16s ease;
     -webkit-app-region: no-drag;
 }
 
+.postit:hover .color-dots {
+    opacity: 1;
+    pointer-events: auto;
+}
+
 .dot {
-    width: 14px;
-    height: 14px;
+    width: 16px;
+    height: 16px;
     border: 1px solid rgba(0, 0, 0, 0.25);
     cursor: pointer;
 }
