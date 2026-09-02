@@ -7,8 +7,8 @@ const ROWS = 5;
 
 //
 function setTile(el, col, row) {
-    const pos = (col / (COLS - 1)) * 100;
-    const postY = (row / (ROWS - 1)) * 100;
+    const posX = (col / (COLS - 1)) * 100;
+    const posY = (row / (ROWS - 1)) * 100;
     el.style.backgroundPosition = `${posX}% ${posY}%`;
 }
 
@@ -20,7 +20,7 @@ dots.forEach(dot => {
     dot.addEventListener('click', () => {
         setTile(postit, col, row);
         postit.dataset.col = col;
-        postit.dataset.row;
+        postit.dataset.row = row;
     });
 });
 

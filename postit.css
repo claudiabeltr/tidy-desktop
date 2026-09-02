@@ -85,7 +85,7 @@ html, body {
     background: transparent;
     resize: none;
     outline: none;
-    padding: 85px 30px;
+    padding: 20px 20px;
     font-size: 14px;
     color: #3a3a3a;
     font-family: inherit;
@@ -99,7 +99,9 @@ html, body {
     resize: none;
     outline: none;
     outline: none;
-    padding: 8px 10px;
+    padding: 10px;
+    position: relative;
+    top: 6px;
     font-size: 14px;
     color: #3a3a3a;
     font-family: inherit; /* !! */
