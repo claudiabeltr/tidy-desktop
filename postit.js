@@ -1,6 +1,8 @@
+const { ipcRenderer } = require('electron');
 const postit = document.getElementById('postit');
 const closeBtn = document.getElementById('close-btn');
 const dots = document.querySelectorAll('.dot');
+const addBtn = document.getElementById('add-btn');
 
 const COLS = 5;
 const ROWS = 5;
@@ -30,3 +32,7 @@ setTile(postit, 0, 0);
 closeBtn.addEventListener('click', () => {
     window.close();
 });
+
+addBtn.addEventListener('click', () => {
+    ipcRenderer.send('create-postit');
+})

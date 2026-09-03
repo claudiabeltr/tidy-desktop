@@ -1,4 +1,6 @@
-const { app, BrowserWindow } = require('electron');
+const { app, BrowserWindow, ipcMain } = require('electron');
+
+let offset = 0;
 
 function createPostIt() {
   const win = new BrowserWindow({
@@ -9,17 +11,22 @@ function createPostIt() {
     alwaysOnTop: true,
     resizable: false,
     webPreferences: {
-      contextIsolation: true,
-      nodeIntegration: false
+      contextIsolation: false,
+      nodeIntegration: true
     }
   });
 
   win.loadFile('postit.html');
+  offset += 30; /* increments number per postit (+) */
 }
 
 app.whenReady().then(() => {
   createPostIt();
 });
+
+ipcMain.on('create-postit', () => {
+  createPostIt();
+})
 
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') app.quit();
