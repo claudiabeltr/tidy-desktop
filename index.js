@@ -6,10 +6,12 @@ function createPostIt() {
   const win = new BrowserWindow({
     width: 220,
     height: 220,
+    minWidth: 150,
+    minHeight: 120,
     frame: false,
     transparent: true,
     alwaysOnTop: true,
-    resizable: false,
+    resizable: true,
     webPreferences: {
       contextIsolation: false,
       nodeIntegration: true
