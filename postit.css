@@ -32,7 +32,7 @@ html, body {
 .postit-header {
     height: 28px;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: flex-end;
     padding: 0 6px;
     -webkit-app-region: drag;
@@ -74,7 +74,7 @@ html, body {
 }
 
 /* invisible bridge FIX hover*/
-.postit::before {
+.postit:before {
     content: "";
     position: absolute;
     left: -26px;
@@ -107,20 +107,24 @@ html, body {
     -webkit-app-region: no-drag;
 }
 
+.header-buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2px;
+    -webkit-app-region: no-drag;
+}
+
 .close-btn {
     -webkit-app-region: no-drag;
     border: none;
     background: transparent;
-    resize: none;
     outline: none;
-    outline: none;
-    padding: 10px;
-    position: relative;
-    top: 6px;
-    font-size: 14px;
+    padding: 4px;
+    font-size: 11px;
     color: #3a3a3a;
     font-family: inherit; /* !! */
-    -webkit-app-region: no-drag;
+    cursor: pointer;
 }
 
 .add-btn {
