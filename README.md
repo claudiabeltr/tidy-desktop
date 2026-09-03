@@ -10,10 +10,10 @@ A lightweight desktop widget that lets you scatter customizable sticky notes acr
 - [x] Base Electron project structure
 
 ### Phase 1: Functional post-it
-- [ ] Borderless, transparent post-it window
-- [ ] Editable post-it: type text
-- [ ] Drag post-it around the screen
-- [ ] Close/delete an individual post-it
+- [x] Borderless, transparent post-it window
+- [x] Editable post-it: type text
+- [x] Drag post-it around the screen
+- [x] Close/delete an individual post-it
 
 ### Phase 2: Persistence
 - [ ] Save each post-it's content and position on app close
@@ -21,7 +21,7 @@ A lightweight desktop widget that lets you scatter customizable sticky notes acr
 - [ ] Auto-save changes, NO manual save
 
 ### Phase 3: User experience
-- [ ] Post-it menu
+- [x] Post-it menu
 - [ ] Sticker menu
 - [ ] Resize post-it/sticker
 
