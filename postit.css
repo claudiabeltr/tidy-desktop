@@ -58,6 +58,21 @@ html, body {
     pointer-events: auto;
 }
 
+.arrow {
+    -webkit-app-region: no-drag;
+    background: transparent;
+    border: none;
+    font-size: 10px;
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.5);
+    line-height: 1;
+    padding: 2px;
+}
+
+.arrow:hover {
+    color: rgba(0, 0, 0, 0.85);
+}
+
 /* invisible bridge FIX hover*/
 .postit::before {
     content: "";
