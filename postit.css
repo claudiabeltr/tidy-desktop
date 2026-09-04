@@ -15,7 +15,7 @@ html, body {
 .postit,
 .dot {
     background-image: url('assets/postit-tileset.png');
-    background-size: 500% 500%; /* 5x5 */
+    background-size: 500% 600%; /* 5x5 */
     image-rendering: pixelated;
 }
 

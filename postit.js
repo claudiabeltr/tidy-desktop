@@ -8,7 +8,7 @@ const upArrowBtn = document.getElementById('up-arrow');
 const downArrowBtn = document.getElementById('down-arrow')
 
 const COLS = 5;
-const ROWS = 5;
+const ROWS = 6;
 let currentRow = 0; // show dots
 
 //
