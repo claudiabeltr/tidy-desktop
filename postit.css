@@ -1,143 +1,153 @@
+:root {
+  --gutter: 26px;
+  --icon-color: rgba(0, 0, 0, 0.5);
+  --icon-color-hover: rgba(0, 0, 0, 0.85);
+  --tile-cols: 5;
+  --tile-rows: 6;
+}
+
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html, body {
-    width: 100%;
-    height: 100%;
-    background: transparent;
-    overflow: hidden;
-    font-family: 'Segoe UI', sans-serif; /* !! */
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  overflow: hidden;
+  font-family: 'Segoe UI', sans-serif;
 }
 
+/* --- Post-it (tileset sprite) --- */
 .postit,
 .dot {
-    background-image: url('assets/postit-tileset.png');
-    background-size: 500% 600%; /* 5x5 */
-    image-rendering: pixelated;
+  background-image: url('assets/postit-tileset.png');
+  background-size: calc(var(--tile-cols) * 100%) calc(var(--tile-rows) * 100%);
+  image-rendering: pixelated;
 }
 
 .postit {
-    position: relative;
-    width: calc(100% - 26 px);
-    height: 100%;
-    margin-left: 26px;
-    box-shadow: 0, 4px, 10px rgba(0, 0, 0, 0.25);
-    display: flex;
-    flex-direction: column;
+  position: relative;
+  width: calc(100% - var(--gutter));
+  height: 100%;
+  margin-left: var(--gutter);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
 }
 
-.postit-header {
-    height: 28px;
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-end;
-    padding: 0 6px;
-    -webkit-app-region: drag;
-    cursor: grab;
-}
-
-.color-dots {
-    position: absolute;
-    left: -26px;
-    top: 50%;
-    transform: translateY(-50%);
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.16s ease;
-    -webkit-app-region: no-drag;
-}
-
-.postit:hover .color-dots {
-    opacity: 1;
-    pointer-events: auto;
-}
-
-.arrow {
-    -webkit-app-region: no-drag;
-    background: transparent;
-    border: none;
-    font-size: 10px;
-    cursor: pointer;
-    color: rgba(0, 0, 0, 0.5);
-    line-height: 1;
-    padding: 2px;
-}
-
-.arrow:hover {
-    color: rgba(0, 0, 0, 0.85);
-}
-
-/* invisible bridge FIX hover*/
-.postit:before {
-    content: "";
-    position: absolute;
-    left: -26px;
-    top: 0;
-    width: 26px;
-    height: 100%;
-}
-
-.dot {
-    width: 16px;
-    height: 16px;
-    border: 1px solid rgba(0, 0, 0, 0.25);
-    cursor: pointer;
-}
-
-.dot:hover {
-    transform: scale(1.15);
+/* Invisible bridge to the left, keeps :hover active while the
+   cursor crosses the gap between the post-it and the color picker */
+.postit::before {
+  content: "";
+  position: absolute;
+  left: calc(-1 * var(--gutter));
+  top: 0;
+  width: var(--gutter);
+  height: 100%;
 }
 
 .postit-text {
-    flex: 1;
-    border: none;
-    background: transparent;
-    resize: none;
-    outline: none;
-    padding: 20px 20px;
-    font-size: 14px;
-    color: #3a3a3a;
-    font-family: inherit;
-    -webkit-app-region: no-drag;
+  flex: 1;
+  border: none;
+  background: transparent;
+  resize: none;
+  outline: none;
+  padding: 20px;
+  font-size: 14px;
+  color: #3a3a3a;
+  font-family: inherit;
+  -webkit-app-region: no-drag;
+}
+
+/* --- Header (drag handle + buttons) --- */
+.postit-header {
+  height: 28px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 0 6px;
+  -webkit-app-region: drag;
+  cursor: grab;
 }
 
 .header-buttons {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 2px;
-    -webkit-app-region: no-drag;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  -webkit-app-region: no-drag;
+}
+
+.close-btn,
+.add-btn {
+  -webkit-app-region: no-drag;
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: var(--icon-color);
+  font-family: inherit;
+  padding: 4px;
+}
+
+.close-btn:hover,
+.add-btn:hover {
+  color: var(--icon-color-hover);
 }
 
 .close-btn {
-    -webkit-app-region: no-drag;
-    border: none;
-    background: transparent;
-    outline: none;
-    padding: 4px;
-    font-size: 11px;
-    color: #3a3a3a;
-    font-family: inherit; /* !! */
-    cursor: pointer;
+  font-size: 11px;
 }
 
 .add-btn {
-    -webkit-app-region: no-drag;
-    background: transparent;
-    border: none;
-    font-size: 14px;
-    cursor: pointer;
-    color: rgba(0, 0, 0, 0.5);
-    line-height: 1;
-    padding: 4px
+  font-size: 14px;
+  line-height: 1;
 }
 
-.add-btn:hover {
-    color: rgba(0, 0, 0, 0.85);
+/* --- Color picker (dots + row arrows) --- */
+.color-dots {
+  position: absolute;
+  left: calc(-1 * var(--gutter));
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.16s ease;
+  -webkit-app-region: no-drag;
+}
+
+.postit:hover .color-dots {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.dot {
+  width: 16px;
+  height: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+
+.dot:hover {
+  transform: scale(1.15);
+}
+
+.arrow {
+  -webkit-app-region: no-drag;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--icon-color);
+  font-size: 10px;
+  line-height: 1;
+  padding: 2px;
+}
+
+.arrow:hover {
+  color: var(--icon-color-hover);
 }
