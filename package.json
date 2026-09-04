@@ -4,7 +4,8 @@
   "description": "A lightweight desktop widget that lets you scatter customizable sticky notes across your screen. Built with Electron, HTML, CSS, and JavaScript — each note is an independent, borderless, always-on-top window with persistent storage.",
   "main": "index.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "dist": "electron-builder"
   },
   "repository": {
     "type": "git",
@@ -18,7 +19,16 @@
     "url": "https://github.com/claudiabeltr/tidy-desktop/issues"
   },
   "homepage": "https://github.com/claudiabeltr/tidy-desktop#readme",
+  "build": {
+    "appId": "com.claudiabeltr.tidydesktop",
+    "productName": "Tidy Desktop",
+    "win": {
+      "icon": "assets/icon-256.png",
+      "target": "nsis"
+    }
+  },
   "devDependencies": {
-    "electron": "^44.1.0"
+    "electron": "^44.1.0",
+    "electron-builder": "^26.15.3"
   }
 }
