@@ -2,6 +2,12 @@
 
 A lightweight desktop widget that lets you scatter customizable sticky notes across your screen. Built with Electron, HTML, CSS, and JavaScript — each note is an independent, borderless, always-on-top window with persistent storage.
 
+## Download
+
+Get the latest version from the [Releases page](https://github.com/claudiabeltr/tidy-desktop/releases).
+
+> Windows SmartScreen may show a warning since this app isn't code-signed. Click **"More info" → "Run anyway"** to proceed
+
 ## Roadmap
 
 ### Phase 0:
@@ -28,5 +34,3 @@ A lightweight desktop widget that lets you scatter customizable sticky notes acr
 - [x] App icon and branding
 - [x] Package the app: electron-builder or electron-forge
 - [x] Windows instaler .exe
-
-### Future ideas
