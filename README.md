@@ -16,19 +16,17 @@ A lightweight desktop widget that lets you scatter customizable sticky notes acr
 - [x] Close/delete an individual post-it
 
 ### Phase 2: Persistence
-- [ ] Save each post-it's content and position on app close
-- [ ] Restore all post-its on app launch
-- [ ] Auto-save changes, NO manual save
+- [x] Save each post-it's content and position on app close
+- [x] Restore all post-its on app launch
+- [x] Auto-save changes, NO manual save
 
 ### Phase 3: User experience
 - [x] Post-it menu
-- [ ] Sticker menu
-- [ ] Resize post-it/sticker
+- [x] Resize post-it/sticker
 
 ### Phase 4: Distribution
-- [ ] App icon and branding
-- [ ] Package the app: electron-builder or electron-forge
-- [ ] Windows instaler .exe
-- [ ] Realease on Github (1.0)
+- [x] App icon and branding
+- [x] Package the app: electron-builder or electron-forge
+- [x] Windows instaler .exe
 
 ### Future ideas
