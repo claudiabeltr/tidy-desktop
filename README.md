@@ -34,3 +34,10 @@ Get the latest version from the [Releases page](https://github.com/claudiabeltr/
 - [x] App icon and branding
 - [x] Package the app: electron-builder or electron-forge
 - [x] Windows instaler .exe
+
+### Future ideas (backlog)
+- [ ] Linux build (AppImage / .deb)
+- [ ] Multi-monitor support
+- [ ] Customizable keyboard shortcuts
+- [ ] Themes / skins for post-its
+- [ ] Export/import notes
