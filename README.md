@@ -2,42 +2,44 @@
 
 A lightweight desktop widget that lets you scatter customizable sticky notes across your screen. Built with Electron, HTML, CSS, and JavaScript — each note is an independent, borderless, always-on-top window with persistent storage.
 
-## Download
+<img width="896" height="366" alt="image" src="https://github.com/user-attachments/assets/c9d814e0-cede-45ab-b164-d5eb5deb0e31" />
 
-Get the latest version from the [Releases page](https://github.com/claudiabeltr/tidy-desktop/releases).
+## ꩜ How to install
 
-> Windows SmartScreen may show a warning since this app isn't code-signed. Click **"More info" → "Run anyway"** to proceed
+1. Download **`Tidy Desktop Setup 1.0.0.exe`** below
+2. Run the installer and follow the steps
+3. Launch Tidy Desktop from your Start Menu
 
-## Roadmap
+> Windows SmartScreen may show a warning since this app isn't code-signed. Click **"More info" → "Run anyway"** to proceed — this is expected for small independent apps.
 
-### Phase 0:
-- [x] Initial post-it design
-- [x] Github repository created
-- [x] Base Electron project structure
 
-### Phase 1: Functional post-it
-- [x] Borderless, transparent post-it window
-- [x] Editable post-it: type text
-- [x] Drag post-it around the screen
-- [x] Close/delete an individual post-it
+## ꩜ Features
 
-### Phase 2: Persistence
-- [x] Save each post-it's content and position on app close
-- [x] Restore all post-its on app launch
-- [x] Auto-save changes, NO manual save
+- Create unlimited sticky notes, each in its own borderless, always-on-top window
+- Pick from multiple pixel-art colors and patterns via a hidden side picker (hover to reveal, scroll or use arrows to browse)
+- Write and edit text directly on each note
+- Freely drag and resize each note independently
+- Everything auto-saves — text, color, position, and size persist even after closing the app
+- Simple, minimal interface
 
-### Phase 3: User experience
-- [x] Post-it menu
-- [x] Resize post-it/sticker
+<img width="1028" height="344" alt="Captura de pantalla 2026-09-16 131947" src="https://github.com/user-attachments/assets/06960aab-1b75-4268-b43a-67b1025a6583" />
 
-### Phase 4: Distribution
-- [x] App icon and branding
-- [x] Package the app: electron-builder or electron-forge
-- [x] Windows instaler .exe
+> Get the latest version from the [Releases page](https://github.com/claudiabeltr/tidy-desktop/releases).
 
-### Future ideas (backlog)
+---
+
+
+## ꩜ What's next?
+
 - [ ] Linux build (AppImage / .deb)
-- [ ] Multi-monitor support
-- [ ] Customizable keyboard shortcuts
-- [ ] Themes / skins for post-its
-- [ ] Export/import notes
+- [ ] Text formatting (bold, italic, underline)
+- [ ] Custom text color
+- [ ] More pixel art post-its !!
+
+## ꩜ Built with
+
+Electron · HTML · CSS · JavaScript
+
+---
+
+Found a bug or have an idea? Feel free to open an [issue](https://github.com/claudiabeltr/tidy-desktop/issues).
