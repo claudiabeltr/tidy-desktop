@@ -26,8 +26,17 @@ A lightweight desktop widget that lets you scatter customizable sticky notes acr
 
 > Get the latest version from the [Releases page](https://github.com/claudiabeltr/tidy-desktop/releases).
 
----
+### ꩜ How to Use
+- **Write:** click anywhere on the note and start typing — it saves automatically as you go.
+- **Move:** drag the top bar of the note to reposition it anywhere on your screen.
+- **Resize:** drag any edge or corner of the note to make it bigger or smaller.
+- **Change color:** hover over the left edge of the note to reveal the color picker — click a swatch to apply it, or use the ▲ / ▼ arrows (or scroll your mouse wheel) to browse other patterns.
+- **New note:** click the + in the top-right corner to open another independent note.
+- **Close:** click the ✕ in the top-right corner to close that note.
 
+> The color picker is hidden by default — move your mouse over the left side of the note to reveal it.
+
+---
 
 ## ꩜ What's next?
 
